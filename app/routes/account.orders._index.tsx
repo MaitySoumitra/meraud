@@ -16,13 +16,13 @@ import {
   parseOrderFilters,
   ORDER_FILTER_FIELDS,
   type OrderFilterParams,
-} from '~/lib/orderFilters';
-import {CUSTOMER_ORDERS_QUERY} from '~/graphql/customer-account/CustomerOrdersQuery';
+} from 'app/lib/orderFilters';
+import {CUSTOMER_ORDERS_QUERY} from 'app/graphql/customer-account/CustomerOrdersQuery';
 import type {
   CustomerOrdersFragment,
   OrderItemFragment,
 } from 'customer-accountapi.generated';
-import {PaginatedResourceSection} from '~/components/PaginatedResourceSection';
+import {PaginatedResourceSection} from 'app/components/PaginatedResourceSection';
 
 type OrdersLoaderData = {
   customer: CustomerOrdersFragment;

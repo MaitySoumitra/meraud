@@ -1,6 +1,6 @@
 import {useLoaderData} from 'react-router';
 import type {Route} from './+types/pages.$handle';
-import {redirectIfHandleIsLocalized} from '~/lib/redirect';
+import {redirectIfHandleIsLocalized} from 'app/lib/redirect';
 
 export const meta: Route.MetaFunction = ({data}) => {
   return [{title: `Hydrogen | ${data?.page.title ?? ''}`}];

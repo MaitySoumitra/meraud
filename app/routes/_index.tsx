@@ -6,19 +6,19 @@ import type {
   FeaturedCollectionFragment,
   RecommendedProductsQuery,
 } from 'storefrontapi.generated';
-import ProductItem from '~/components/ProductItem';
-import { HOME_BANNER_QUERY } from '~/graphql/banner/HomeBannerQuery';
-import HomeBanner from '~/components/HomeBanner';
-import { BANNER_GRID_QUERY } from '~/graphql/grid/BannerGridquery';
-import BannerGrid from '~/components/BannerGrid';
-import { QUALITY_NECKLACE_QUERY } from '~/graphql/quality/QualityNecklaceQuery';
-import QualityNecklace from '~/components/QualityNecklace'
-import {LEARN_FROM_ANYWHERE_QUERY} from '~/graphql/learning/LearnQuery';
-import LearnFromAnywhere from '~/components/LearnFromAnywhere';
-import { FAQS_QUERY } from '~/graphql/faq/FaqsQuery';
-import FaqSection from '~/components/FaqSection';
-import { TESTIMONIALS_QUERY } from '~/graphql/testimonial/TestimonialsQuery';
-import TestimonialsSection from '~/components/TestimonialsSection';
+import ProductItem from 'app/components/ProductItem';
+import { HOME_BANNER_QUERY } from 'app/graphql/banner/HomeBannerQuery';
+import HomeBanner from 'app/components/HomeBanner';
+import { BANNER_GRID_QUERY } from 'app/graphql/grid/BannerGridquery';
+import BannerGrid from 'app/components/BannerGrid';
+import { QUALITY_NECKLACE_QUERY } from 'app/graphql/quality/QualityNecklaceQuery';
+import QualityNecklace from 'app/components/QualityNecklace'
+import {LEARN_FROM_ANYWHERE_QUERY} from 'app/graphql/learning/LearnQuery';
+import LearnFromAnywhere from 'app/components/LearnFromAnywhere';
+import { FAQS_QUERY } from 'app/graphql/faq/FaqsQuery';
+import FaqSection from 'app/components/FaqSection';
+import { TESTIMONIALS_QUERY } from 'app/graphql/testimonial/TestimonialsQuery';
+import TestimonialsSection from 'app/components/TestimonialsSection';
 export const meta: Route.MetaFunction = () => {
   return [{title: 'Hydrogen | Home'}];
 };

@@ -8,10 +8,10 @@ import {
   getAdjacentAndFirstAvailableVariants,
   useSelectedOptionInUrlParam,
 } from '@shopify/hydrogen';
-import {ProductPrice} from '~/components/ProductPrice';
-import {ProductImage} from '~/components/ProductImage';
-import {ProductForm} from '~/components/ProductForm';
-import {redirectIfHandleIsLocalized} from '~/lib/redirect';
+import {ProductPrice} from 'app/components/ProductPrice';
+import {ProductImage} from 'app/components/ProductImage';
+import {ProductForm} from 'app/components/ProductForm';
+import {redirectIfHandleIsLocalized} from 'app/lib/redirect';
 
 export const meta: Route.MetaFunction = ({data}) => {
   return [
