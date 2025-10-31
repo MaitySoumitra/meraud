@@ -1,0 +1,432 @@
+{
+  "C:/Users/pc/Downloads/meraud/app/styles/app.css": {
+    "file": "assets/app-PRHgcXRF.css",
+    "src": "C:/Users/pc/Downloads/meraud/app/styles/app.css"
+  },
+  "C:/Users/pc/Downloads/meraud/app/styles/reset.css": {
+    "file": "assets/reset-tn0RQdqM.css",
+    "src": "C:/Users/pc/Downloads/meraud/app/styles/reset.css"
+  },
+  "C:/Users/pc/Downloads/meraud/app/styles/tailwind.css": {
+    "file": "assets/tailwind-BQLWWaNK.css",
+    "src": "C:/Users/pc/Downloads/meraud/app/styles/tailwind.css"
+  },
+  "_CartMain-C2bV2p7L.js": {
+    "file": "assets/CartMain-C2bV2p7L.js",
+    "name": "CartMain",
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_index-D0HKkxzK.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_ProductPrice-Dgtrk0hQ.js",
+      "_Image-7_9SoOiR.js",
+      "_Money-Cx_CEXQx.js"
+    ]
+  },
+  "_Image-7_9SoOiR.js": {
+    "file": "assets/Image-7_9SoOiR.js",
+    "name": "Image",
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js"
+    ]
+  },
+  "_Money-Cx_CEXQx.js": {
+    "file": "assets/Money-Cx_CEXQx.js",
+    "name": "Money",
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js"
+    ]
+  },
+  "_PaginatedResourceSection-D4Ka3NP8.js": {
+    "file": "assets/PaginatedResourceSection-D4Ka3NP8.js",
+    "name": "PaginatedResourceSection",
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_index-D0HKkxzK.js"
+    ]
+  },
+  "_ProductItem-cjYNEfLb.js": {
+    "file": "assets/ProductItem-cjYNEfLb.js",
+    "name": "ProductItem",
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "_ProductPrice-Dgtrk0hQ.js": {
+    "file": "assets/ProductPrice-Dgtrk0hQ.js",
+    "name": "ProductPrice",
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_Money-Cx_CEXQx.js"
+    ]
+  },
+  "_chunk-TMI4QPZX-Cy_U8x-I.js": {
+    "file": "assets/chunk-TMI4QPZX-Cy_U8x-I.js",
+    "name": "chunk-TMI4QPZX"
+  },
+  "_index-D0HKkxzK.js": {
+    "file": "assets/index-D0HKkxzK.js",
+    "name": "index",
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ],
+    "dynamicImports": [
+      "node_modules/@shopify/hydrogen/dist/production/log-seo-tags-TY72EQWZ.js"
+    ]
+  },
+  "_jsx-runtime-BDjnDDSQ.js": {
+    "file": "assets/jsx-runtime-BDjnDDSQ.js",
+    "name": "jsx-runtime",
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js"
+    ]
+  },
+  "_search-DOeYwaXi.js": {
+    "file": "assets/search-DOeYwaXi.js",
+    "name": "search"
+  },
+  "app/entry.client.tsx": {
+    "file": "assets/entry.client-DNMQ5tMF.js",
+    "name": "entry.client",
+    "src": "app/entry.client.tsx",
+    "isEntry": true,
+    "imports": [
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_index-D0HKkxzK.js"
+    ]
+  },
+  "app/root.tsx?__react-router-build-client-route": {
+    "file": "assets/root-BaeyJPn2.js",
+    "name": "root",
+    "src": "app/root.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_index-D0HKkxzK.js",
+      "_ProductPrice-Dgtrk0hQ.js",
+      "_CartMain-C2bV2p7L.js",
+      "_search-DOeYwaXi.js",
+      "_Image-7_9SoOiR.js",
+      "_Money-Cx_CEXQx.js"
+    ],
+    "assets": [
+      "assets/reset-tn0RQdqM.css",
+      "assets/app-PRHgcXRF.css",
+      "assets/tailwind-BQLWWaNK.css"
+    ]
+  },
+  "app/routes/$.tsx?__react-router-build-client-route": {
+    "file": "assets/_-Dl_UYmzA.js",
+    "name": "_",
+    "src": "app/routes/$.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js"
+    ]
+  },
+  "app/routes/[robots.txt].tsx?__react-router-build-client-route": {
+    "file": "assets/_robots.txt_-l0sNRNKZ.js",
+    "name": "_robots.txt_",
+    "src": "app/routes/[robots.txt].tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/[sitemap.xml].tsx?__react-router-build-client-route": {
+    "file": "assets/_sitemap.xml_-l0sNRNKZ.js",
+    "name": "_sitemap.xml_",
+    "src": "app/routes/[sitemap.xml].tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/_index.tsx?__react-router-build-client-route": {
+    "file": "assets/_index-BjFwfhmK.js",
+    "name": "_index",
+    "src": "app/routes/_index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_ProductItem-cjYNEfLb.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "app/routes/account.$.tsx?__react-router-build-client-route": {
+    "file": "assets/account._-l0sNRNKZ.js",
+    "name": "account._",
+    "src": "app/routes/account.$.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/account._index.tsx?__react-router-build-client-route": {
+    "file": "assets/account._index-l0sNRNKZ.js",
+    "name": "account._index",
+    "src": "app/routes/account._index.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/account.addresses.tsx?__react-router-build-client-route": {
+    "file": "assets/account.addresses-CtdGs7RP.js",
+    "name": "account.addresses",
+    "src": "app/routes/account.addresses.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ]
+  },
+  "app/routes/account.orders.$id.tsx?__react-router-build-client-route": {
+    "file": "assets/account.orders._id-B2EBd_gP.js",
+    "name": "account.orders._id",
+    "src": "app/routes/account.orders.$id.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_Money-Cx_CEXQx.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "app/routes/account.orders._index.tsx?__react-router-build-client-route": {
+    "file": "assets/account.orders._index-tcGT_SP5.js",
+    "name": "account.orders._index",
+    "src": "app/routes/account.orders._index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_PaginatedResourceSection-D4Ka3NP8.js",
+      "_index-D0HKkxzK.js",
+      "_Money-Cx_CEXQx.js"
+    ]
+  },
+  "app/routes/account.profile.tsx?__react-router-build-client-route": {
+    "file": "assets/account.profile-SON57RTz.js",
+    "name": "account.profile",
+    "src": "app/routes/account.profile.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ]
+  },
+  "app/routes/account.tsx?__react-router-build-client-route": {
+    "file": "assets/account-mb5tPRgj.js",
+    "name": "account",
+    "src": "app/routes/account.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ]
+  },
+  "app/routes/account_.authorize.tsx?__react-router-build-client-route": {
+    "file": "assets/account_.authorize-l0sNRNKZ.js",
+    "name": "account_.authorize",
+    "src": "app/routes/account_.authorize.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/account_.login.tsx?__react-router-build-client-route": {
+    "file": "assets/account_.login-l0sNRNKZ.js",
+    "name": "account_.login",
+    "src": "app/routes/account_.login.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/account_.logout.tsx?__react-router-build-client-route": {
+    "file": "assets/account_.logout-l0sNRNKZ.js",
+    "name": "account_.logout",
+    "src": "app/routes/account_.logout.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/api.$version.[graphql.json].tsx?__react-router-build-client-route": {
+    "file": "assets/api._version._graphql.json_-l0sNRNKZ.js",
+    "name": "api._version._graphql.json_",
+    "src": "app/routes/api.$version.[graphql.json].tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/blogs.$blogHandle.$articleHandle.tsx?__react-router-build-client-route": {
+    "file": "assets/blogs._blogHandle._articleHandle-Bxocp0rw.js",
+    "name": "blogs._blogHandle._articleHandle",
+    "src": "app/routes/blogs.$blogHandle.$articleHandle.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "app/routes/blogs.$blogHandle._index.tsx?__react-router-build-client-route": {
+    "file": "assets/blogs._blogHandle._index-TTXJN9SL.js",
+    "name": "blogs._blogHandle._index",
+    "src": "app/routes/blogs.$blogHandle._index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_PaginatedResourceSection-D4Ka3NP8.js",
+      "_Image-7_9SoOiR.js",
+      "_index-D0HKkxzK.js"
+    ]
+  },
+  "app/routes/blogs._index.tsx?__react-router-build-client-route": {
+    "file": "assets/blogs._index-CYjfF0ge.js",
+    "name": "blogs._index",
+    "src": "app/routes/blogs._index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_PaginatedResourceSection-D4Ka3NP8.js",
+      "_index-D0HKkxzK.js"
+    ]
+  },
+  "app/routes/cart.$lines.tsx?__react-router-build-client-route": {
+    "file": "assets/cart._lines-DRH4qLfN.js",
+    "name": "cart._lines",
+    "src": "app/routes/cart.$lines.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js"
+    ]
+  },
+  "app/routes/cart.tsx?__react-router-build-client-route": {
+    "file": "assets/cart-B3dX3VaM.js",
+    "name": "cart",
+    "src": "app/routes/cart.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_CartMain-C2bV2p7L.js",
+      "_index-D0HKkxzK.js",
+      "_ProductPrice-Dgtrk0hQ.js",
+      "_Money-Cx_CEXQx.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "app/routes/collections.$handle.tsx?__react-router-build-client-route": {
+    "file": "assets/collections._handle-BzdrhW_Q.js",
+    "name": "collections._handle",
+    "src": "app/routes/collections.$handle.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_index-D0HKkxzK.js",
+      "_PaginatedResourceSection-D4Ka3NP8.js",
+      "_ProductItem-cjYNEfLb.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "app/routes/collections._index.tsx?__react-router-build-client-route": {
+    "file": "assets/collections._index-DMagpk4M.js",
+    "name": "collections._index",
+    "src": "app/routes/collections._index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_PaginatedResourceSection-D4Ka3NP8.js",
+      "_Image-7_9SoOiR.js",
+      "_index-D0HKkxzK.js"
+    ]
+  },
+  "app/routes/collections.all.tsx?__react-router-build-client-route": {
+    "file": "assets/collections.all-BLBkgw0R.js",
+    "name": "collections.all",
+    "src": "app/routes/collections.all.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_PaginatedResourceSection-D4Ka3NP8.js",
+      "_ProductItem-cjYNEfLb.js",
+      "_index-D0HKkxzK.js",
+      "_Image-7_9SoOiR.js"
+    ]
+  },
+  "app/routes/discount.$code.tsx?__react-router-build-client-route": {
+    "file": "assets/discount._code-l0sNRNKZ.js",
+    "name": "discount._code",
+    "src": "app/routes/discount.$code.tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "app/routes/pages.$handle.tsx?__react-router-build-client-route": {
+    "file": "assets/pages._handle-DkxntKpM.js",
+    "name": "pages._handle",
+    "src": "app/routes/pages.$handle.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ]
+  },
+  "app/routes/policies.$handle.tsx?__react-router-build-client-route": {
+    "file": "assets/policies._handle-DAxjnqAt.js",
+    "name": "policies._handle",
+    "src": "app/routes/policies.$handle.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ]
+  },
+  "app/routes/policies._index.tsx?__react-router-build-client-route": {
+    "file": "assets/policies._index--SIX1aFh.js",
+    "name": "policies._index",
+    "src": "app/routes/policies._index.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js"
+    ]
+  },
+  "app/routes/products.$handle.tsx?__react-router-build-client-route": {
+    "file": "assets/products._handle-DGd7t6xv.js",
+    "name": "products._handle",
+    "src": "app/routes/products.$handle.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_index-D0HKkxzK.js",
+      "_ProductPrice-Dgtrk0hQ.js",
+      "_Image-7_9SoOiR.js",
+      "_Money-Cx_CEXQx.js"
+    ]
+  },
+  "app/routes/search.tsx?__react-router-build-client-route": {
+    "file": "assets/search-D_cPpmIE.js",
+    "name": "search",
+    "src": "app/routes/search.tsx?__react-router-build-client-route",
+    "isEntry": true,
+    "imports": [
+      "_chunk-TMI4QPZX-Cy_U8x-I.js",
+      "_jsx-runtime-BDjnDDSQ.js",
+      "_index-D0HKkxzK.js",
+      "_search-DOeYwaXi.js",
+      "_Image-7_9SoOiR.js",
+      "_Money-Cx_CEXQx.js"
+    ]
+  },
+  "app/routes/sitemap.$type.$page[.xml].tsx?__react-router-build-client-route": {
+    "file": "assets/sitemap._type._page_.xml_-l0sNRNKZ.js",
+    "name": "sitemap._type._page_.xml_",
+    "src": "app/routes/sitemap.$type.$page[.xml].tsx?__react-router-build-client-route",
+    "isEntry": true
+  },
+  "node_modules/@shopify/hydrogen/dist/production/log-seo-tags-TY72EQWZ.js": {
+    "file": "assets/log-seo-tags-TY72EQWZ-DCHH-_Gl.js",
+    "name": "log-seo-tags-TY72EQWZ",
+    "src": "node_modules/@shopify/hydrogen/dist/production/log-seo-tags-TY72EQWZ.js",
+    "isDynamicEntry": true
+  },
+  "oxygen.json": {
+    "file": "oxygen.json",
+    "src": "oxygen.json"
+  }
+}
