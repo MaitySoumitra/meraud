@@ -1,0 +1,322 @@
+import {Await, useLoaderData, Link} from 'react-router';
+import type {Route} from './+types/_index';
+import {Suspense, useState} from 'react';
+import {Image} from '@shopify/hydrogen';
+import type {
+  FeaturedCollectionFragment,
+  RecommendedProductsQuery,
+} from 'storefrontapi.generated';
+import ProductItem from '~/components/ProductItem';
+import { HOME_BANNER_QUERY } from '~/graphql/banner/HomeBannerQuery';
+import HomeBanner from '~/components/HomeBanner';
+import { BANNER_GRID_QUERY } from '~/graphql/grid/BannerGridquery';
+import BannerGrid from '~/components/BannerGrid';
+import { QUALITY_NECKLACE_QUERY } from '~/graphql/quality/QualityNecklaceQuery';
+import QualityNecklace from '~/components/QualityNecklace'
+import {LEARN_FROM_ANYWHERE_QUERY} from '~/graphql/learning/LearnQuery';
+import LearnFromAnywhere from '~/components/LearnFromAnywhere';
+import { FAQS_QUERY } from '~/graphql/faq/FaqsQuery';
+import FaqSection from '~/components/FaqSection';
+import { TESTIMONIALS_QUERY } from '~/graphql/testimonial/TestimonialsQuery';
+import TestimonialsSection from '~/components/TestimonialsSection';
+export const meta: Route.MetaFunction = () => {
+  return [{title: 'Hydrogen | Home'}];
+};
+
+export async function loader(args: Route.LoaderArgs) {
+  // Start fetching non-critical data without blocking time to first byte
+  const deferredData = loadDeferredData(args);
+
+  // Await the critical data required to render initial state of the page
+  const criticalData = await loadCriticalData(args);
+
+  return {...deferredData, ...criticalData};
+}
+
+/**
+ * Load data necessary for rendering content above the fold. This is the critical data
+ * needed to render the page. If it's unavailable, the whole page should 400 or 500 error.
+ */
+async function loadCriticalData({context}: Route.LoaderArgs) {
+  const [collectionsData, homeBannerData,bannerGridData,qualityNecklaceData, learnFromAnywhereData, faqSectionData, testimonialsData] = await Promise.all([
+    context.storefront.query(FEATURED_COLLECTION_QUERY),
+    context.storefront.query(HOME_BANNER_QUERY),
+    context.storefront.query(BANNER_GRID_QUERY),
+    context.storefront.query(QUALITY_NECKLACE_QUERY),
+    context.storefront.query(LEARN_FROM_ANYWHERE_QUERY),
+    context.storefront.query(FAQS_QUERY),
+    context.storefront.query(TESTIMONIALS_QUERY),
+  ]);
+
+  return {
+    featuredCollection: collectionsData.collections.nodes[0], // collection
+    homeBanner: homeBannerData.homeBanner, // homeBanner metaobject
+    bannerGrid: bannerGridData.bannerGrid, // bannerGrid metaobject
+    qualityNecklace: qualityNecklaceData.qualityNecklace, // qualityNecklace metaobject
+    learnFromAnywhere: learnFromAnywhereData.learnFromAnywhere, // learnFromAnywhere metaobject
+    faqSection: faqSectionData.faqSection, // faqSection metaobject
+    testimonials: testimonialsData.testimonials, // testimonials metaobject
+  };
+}
+
+/**
+ * Load data for rendering content below the fold. This data is deferred and will be
+ * fetched after the initial page load. If it's unavailable, the page should still 200.
+ * Make sure to not throw any errors here, as it will cause the page to 500.
+ */
+function loadDeferredData({context}: Route.LoaderArgs) {
+  const recommendedProducts = context.storefront
+    .query(RECOMMENDED_PRODUCTS_QUERY)
+    .catch((error: Error) => {
+      // Log query errors, but don't throw them so the page can still render
+      console.error(error);
+      return null;
+    });
+
+  return {
+    recommendedProducts,
+  };
+}
+
+export default function Homepage() {
+  const data = useLoaderData<typeof loader>();
+  return (
+    <div className="home">
+      <HomeBanner homeBanner={data.homeBanner}/>
+      <RecommendedProducts products={data.recommendedProducts} />
+      <BannerGrid bannerGrid={data.bannerGrid}/>
+      <QualityNecklace qualityNecklace={data.qualityNecklace}/>
+      <BestProducts products={data.recommendedProducts} />
+      <TestimonialsSection testimonials={data.testimonials} />
+      <LearnFromAnywhere learnFromAnywhere={data.learnFromAnywhere} />
+      <FaqSection faqSection={data.faqSection} />
+      </div>
+  );
+}
+
+function FeaturedCollection({
+  collection,
+}: {
+  collection: FeaturedCollectionFragment;
+}) {
+  if (!collection) return null;
+  const image = collection?.image;
+  return (
+    <Link
+      className="featured-collection"
+      to={`/collections/${collection.handle}`}
+    >
+      {image && (
+        <div className="featured-collection-image">
+          <Image data={image} sizes="100vw" />
+        </div>
+      )}
+      <h1>{collection.title}</h1>
+    </Link>
+  );
+}
+
+export function RecommendedProducts({
+  products,
+}: {
+  products: Promise<RecommendedProductsQuery | null>;
+}) {
+  const [index, setIndex] = useState(0);
+
+  const shiftLeft = (length: number) => {
+    setIndex((prev) => (prev > 0 ? prev - 1 : length - 4));
+  };
+
+  const shiftRight = (length: number) => {
+    setIndex((prev) => (prev < length - 4 ? prev + 1 : 0));
+  };
+
+  return (
+    <section className="relative  overflow-hidden py-20 px-4 md:px-16">
+      {/* Background */}
+      <div className="absolute inset-0 bg-[#191919] " />
+
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <p className="text-[#d4af37]  mb-2 font-playball text-lg">
+          Our Latest Products
+        </p>
+        <h2 className="text-4xl md:text-5xl text-white font-cormorant mb-12">
+          New Arrival
+        </h2>
+
+        <Suspense fallback={<div className="text-white">Loading...</div>}>
+          <Await resolve={products}>
+            {(response) =>
+              response ? (
+                <div className="relative flex items-center justify-center pt-8">
+                  {/* Left Button */}
+                  <button
+                    onClick={() => shiftLeft(response.products.nodes.length)}
+                    className="absolute left-0 z-10 p-5 rounded-full bg-[#000] hover:bg-[#d4af37] text-white hover:text-black rounded-full transition"
+                  >
+                    <img src="/prev.png" alt="" className='w-3' />
+                  </button>
+
+                  {/* Carousel Wrapper */}
+                  <div className="overflow-hidden w-full">
+                    <div
+                      className="flex transition-transform duration-700 ease-in-out"
+                      style={{
+                        transform: `translateX(-${index * 300}px)`,
+                      }}
+                    >
+                      {response.products.nodes.map((product) => (
+                        <ProductItem key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right Button */}
+                  <button
+                    onClick={() => shiftRight(response.products.nodes.length)}
+                    className="absolute right-0 z-10 p-5 rounded-full bg-[#000] hover:bg-[#d4af37] text-white hover:text-black rounded-full transition"
+                  >
+                    <img src="/next.png" alt="" className='w-3' />
+                  </button>
+                </div>
+              ) : null
+            }
+          </Await>
+        </Suspense>
+
+       
+      </div>
+    </section>
+  );
+}
+export function BestProducts({
+  products,
+}: {
+  products: Promise<RecommendedProductsQuery | null>;
+}) {
+  const [index, setIndex] = useState(0);
+
+  const shiftLeft = (length: number) => {
+    setIndex((prev) => (prev > 0 ? prev - 1 : length - 4));
+  };
+
+  const shiftRight = (length: number) => {
+    setIndex((prev) => (prev < length - 4 ? prev + 1 : 0));
+  };
+
+  return (
+    <section className="relative  overflow-hidden py-20 px-4 md:px-16">
+      {/* Background */}
+      <div className="absolute inset-0 bg-[#191919] " />
+
+      <div className="relative z-10 max-w-7xl mx-auto text-center">
+        <p className="text-[#d4af37]  mb-2 font-playball text-lg">
+          Our Latest Products
+        </p>
+        <h2 className="text-4xl md:text-5xl text-white font-cormorant mb-12">
+         Best Seller
+        </h2>
+
+        <Suspense fallback={<div className="text-white">Loading...</div>}>
+          <Await resolve={products}>
+            {(response) =>
+              response ? (
+                <div className="relative flex items-center justify-center pt-8">
+                  {/* Left Button */}
+                  <button
+                    onClick={() => shiftLeft(response.products.nodes.length)}
+                    className="absolute left-0 z-10 p-5 rounded-full bg-[#000] hover:bg-[#d4af37] text-white hover:text-black rounded-full transition"
+                  >
+                    <img src="/prev.png" alt="" className='w-3' />
+                  </button>
+
+                  {/* Carousel Wrapper */}
+                  <div className="overflow-hidden w-full">
+                    <div
+                      className="flex transition-transform duration-700 ease-in-out"
+                      style={{
+                        transform: `translateX(-${index * 300}px)`,
+                      }}
+                    >
+                      {response.products.nodes.map((product) => (
+                        <ProductItem key={product.id} product={product} />
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right Button */}
+                  <button
+                    onClick={() => shiftRight(response.products.nodes.length)}
+                    className="absolute right-0 z-10 p-5 rounded-full bg-[#000] hover:bg-[#d4af37] text-white hover:text-black rounded-full transition"
+                  >
+                    <img src="/next.png" alt="" className='w-3' />
+                  </button>
+                </div>
+              ) : null
+            }
+          </Await>
+        </Suspense>
+
+       
+      </div>
+    </section>
+  );
+}
+
+const FEATURED_COLLECTION_QUERY = `#graphql
+  fragment FeaturedCollection on Collection {
+    id
+    title
+    image {
+      id
+      url
+      altText
+      width
+      height
+    }
+    handle
+  }
+  query FeaturedCollection($country: CountryCode, $language: LanguageCode)
+    @inContext(country: $country, language: $language) {
+    collections(first: 1, sortKey: UPDATED_AT, reverse: true) {
+      nodes {
+        ...FeaturedCollection
+      }
+    }
+  }
+` as const;
+
+const RECOMMENDED_PRODUCTS_QUERY = `#graphql
+  fragment RecommendedProduct on Product {
+    id
+    title
+    handle
+    priceRange {
+    minVariantPrice {
+      amount
+      currencyCode
+    }
+  }
+  compareAtPriceRange {
+    maxVariantPrice {
+      amount
+      currencyCode
+    }
+  }
+    featuredImage {
+      id
+      url
+      altText
+      width
+      height
+    }
+  }
+  query RecommendedProducts ($country: CountryCode, $language: LanguageCode)
+    @inContext(country: $country, language: $language) {
+    products(first: 10, sortKey: UPDATED_AT, reverse: true) {
+      nodes {
+        ...RecommendedProduct
+      }
+    }
+  }
+` as const;
